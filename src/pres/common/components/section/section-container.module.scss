@@ -1,0 +1,19 @@
+  // Added common section padding to override existing padding
+  .commonPT,
+  .commonPY {
+   padding-top: rem(60px) !important;
+ 
+   @media screen and (max-width: 991px) {
+    padding-top: rem(30px) !important;
+   }
+  }
+ 
+  .commonPB,
+  .commonPY {
+   padding-bottom: rem(60px) !important;
+ 
+   @media screen and (max-width: 991px) {
+    padding-bottom: rem(30px) !important;
+   }
+  }
+  // Common section padding ends

@@ -1,0 +1,24 @@
+.container {
+  display: -webkit-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: normal;
+  -webkit-box-orient: vertical;
+
+  & + button {
+    text-decoration: underline;
+  }
+}
+
+.closedContainer * {
+  display: initial;
+}
+  
+@for $i from 1 through 20 {
+  .line-clamp-#{$i} { 
+    line-clamp: $i;
+    -webkit-line-clamp: $i;
+  }
+}

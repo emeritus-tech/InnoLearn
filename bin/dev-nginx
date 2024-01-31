@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Reset config and delete initialization files
+psmgr=/tmp/nginx-buildpack-wait
+rm /tmp/app-initialized
+rm /tmp/nginx.socket
+rm -f $psmgr
+mkfifo $psmgr
+
+# Load env vars
+export $(grep -v '^#' .env | xargs)
+
+# Create log files
+mkdir -p logs/nginx
+touch logs/nginx/access.log
+touch logs/nginx/error.log
+
+# Evaluate config
+erb config/nginx.conf.erb > config/nginx.conf
+
+# Start log redirection.
+(
+  # Redirect nginx logs to stdout.
+  tail -qF -n 0 logs/nginx/*.log
+  echo 'logs' >$psmgr
+) &
+
+# Start server
+(
+  echo "buildpack=nginx at=start-app"
+  node server.js
+) &
+
+if [[ -z "$FORCE" ]]
+then
+  FILE="/tmp/app-initialized"
+
+  # Wait until the node server is running before starting Nginx
+  while [[ ! -f "$FILE" ]]
+  do
+    echo 'buildpack=nginx at=app-initialization'
+    sleep 1
+  done
+  echo 'buildpack=nginx at=app-initialized'
+fi
+
+# Start Nginx
+(
+  echo 'buildpack=nginx at=nginx-start'
+  nginx -p . -c config/nginx.conf
+  echo 'nginx' >$psmgr
+) &
+
+read exit_process <$psmgr
+echo "buildpack=nginx at=exit process=$exit_process"
+exit 1

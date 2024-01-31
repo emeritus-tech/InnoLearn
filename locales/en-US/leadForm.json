@@ -1,0 +1,15 @@
+{
+  "b2bFormTitle" : "Learning is better with your colleagues",
+  "takingProgramTogetherText": "Our participants tell us that taking this program together with their colleagues helps to share common language and accelerate impact.",
+  "pricingOfferText": "We hope you find the same. Special pricing is available for groups.",
+  "referralLeadFormTitle": "Continue Your Sign Up",
+  "referralCta":"CLAIM REFERRAL",
+  "enterpriseCta" :"Request Enrollment",
+  "enterpriseTitle":"Provide Your Info Below",
+  "firstNameErrorTxt": "Must be 40 chars long max",
+  "lastNameErrorTxt": "Must be 80 chars long max",
+  "emailErrorTxt": "Invalid email format",
+  "phoneErrorTxt": "Please provide valid phone number",
+  "emptyErrorTxt": "Please provide valid value",
+  "required": "Required"  
+}

@@ -1,0 +1,84 @@
+{
+  "referralsForm": {
+    "fillInTheDetails": "FILL IN THE DETAILS",
+    "addFriendDetail": "Add friend details",
+    "friendFirstName": "First name",
+    "friendLastName": "Last name",
+    "friendEmail": "Email",
+    "friendPhone": "Phone",
+    "friendCountry": "Country",
+    "addAdvocateDetails": "Add advocate details",
+    "advocateName": "Name",
+    "advocateEmail": "Email",
+    "advocatePhone": "Phone",
+    "advocateCountry": "Country",
+    "chooseProgram": "Choose program",
+    "programInterestedIn": "Program interested in",
+    "enterYourDetails": "Enter your details",
+    "employeeEmailID": "Employee email ID",
+    "copyBottom": "Note: Enter your Emeritus email id you use to login into salesforce",
+    "submit": "SUBMIT"
+  },
+  "greeting": "Olá mundo",
+  "readMore": "Ler mais",
+  "showMore": "Mostre mais",
+  "save": "DESCONTO {{value}}",
+  "days": "{{value}} días",
+  "hours": "{{value}} horas",
+  "programFee": "Investimento no curso",
+  "payBy": "Pague até",
+  "at": "até",
+  "tbd": "TBD",
+  "promotionAndEvents": "Especialista em promoção e eventos",
+  "learningWithFriendsBenefits" : "A melhor parte de estudar com um colega é que um incentiva o outro e vocês discutem em profundidade o que estão aprendendo.",
+ "locales": {
+    "en-US": "Inglês",
+    "es-ES": "Espanhol",
+    "pt-BR": "Português",
+    "en-IN": "Inglês Indiano",
+    "fr-FR": "Francês"
+  },
+  "flexiPay": {
+    "title": "Opções de pagamento flexíveis disponíveis",
+    "programFee": "TAXA DO PROGRAMA",
+    "discounts": "Quaisquer descontos serão aplicados na finalização da compra.",
+    "payFull": "Pague integralmente",
+    "payInInstallments": "Pague em {{installments}} parcelas",
+    "paymentDate": "Data de pagamento",
+    "theadProgramFee": "Taxa do programa",
+    "amountDue": "Valor devido",
+    "immediately": "Imediatamente"
+  },
+  "applyCoupon":"Aplicar código de cupom",
+  "couponCode":"Lembre-se de aplicar o código do cupom na finalização da compra: {{coupon}}",
+  "applyNow": "Aplique agora",
+  "referralModal": {
+    "title": "Parabéns",
+    "subtitle": "Você foi convidado para {{program_name}}.",
+    "subtitleTwo": "Para começar, preencha o formulário de informações na página seguinte.",
+    "explorePrograms": "Explorar programas",
+    "listTitle": "Como funciona",
+    "listItems": {
+      "listItemOne": "Formulário de informações completo",
+      "listItemTwo": "Use o código de referência do seu colega: <b>{{coupon}}</b>",
+      "listItemThree": "Aprendam juntos e aproveitem <b>{{friends_reward_amount}}</b> de desconto nas taxas do programa"
+    }
+  },
+  "enterpriseB2b":{
+    "title":"Obrigado pelo seu interesse no programa.",
+    "greetingTxt":"Você receberá um e-mail com um link para o folheto do programa e as próximas etapas.",
+    "email":"Contate-nos por e-mail",
+    "emailContactDetails": "Tem dúvidas sobre o curso ou como se inscrever? Envie-nos um e-mail para group-enrollments@emeritus.org. Tentamos responder às perguntas o mais rápido possível, mas aguarde de 24 a 48 horas para resposta.",
+    "policy":"Dúvidas sobre reembolso?",
+    "policyContactDetails":"Entre em contato com seu gerente ou parceiro de negócios de RH.",
+    "applyTitle":"Tem perguntas?",
+    "apply": "E-mail",
+    "applyContactDetails":"<a class='text-white' href='mailto:enterprise.clientsuccess@emeritus.org'>enterprise.clientsuccess@emeritus.org</a>. Tentamos responder às perguntas em 24 horas ou menos. No entanto, durante fins de semana e feriados, nossas respostas podem levar até 72 horas."
+  },
+  "dynamicRibbonFallbackReferral":{
+    "inviteColleagues":"Convide seus colegas e ganhe descontos de",
+    "inviteNow":"Convidar agora"
+  },
+  "startDateLabel": "Começa Em",
+  "lastDayToEnrollLabel": "Último dia para se inscrever"
+}

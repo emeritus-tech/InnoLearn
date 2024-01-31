@@ -1,0 +1,37 @@
+.navigation {
+    & li {
+      list-style-type: none;
+      & a {
+        font-family: $roboto;
+        color: $color-gray-900;
+        &:hover {
+          color: $color-gray-500;
+        }
+      }
+      &:last-of-type {
+        margin-right: 0 !important;
+      }
+    }
+    @media screen and (max-width: $bp-md) {
+      & ul {
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        height: calc(100vh - $header-height);
+        background-color: $color-gray-80;
+        border-top: 1px solid $border-color;
+        & li {
+          padding-left: 0.5rem;
+          border-bottom: 1px solid $border-color;
+          &:hover {
+            background-color: $color-gray-100;
+          }
+        }
+      }
+    }
+  }
+  
+  .menuIcon {
+    gap: 0.5rem;
+    font-family: $roboto;
+  }

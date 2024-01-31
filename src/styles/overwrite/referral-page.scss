@@ -1,0 +1,30 @@
+.referral--header > div {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: $bp-md) {
+  .referral--header > div {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.referral-parent-section {
+  .programs-list-heading {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .programs-list-intro {
+    text-align: center;
+  }
+
+  a.hyperlink:not(.btn, .link) {
+    color: $color-gray-800 !important;
+    text-decoration: underline;
+  }
+
+  .modal {
+    color: $color-gray-800;
+  }
+}

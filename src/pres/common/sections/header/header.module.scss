@@ -1,0 +1,46 @@
+.container {
+  z-index: 999;
+  background-color: $color-gray-80;
+}
+
+.withBorder {
+  border-bottom: 1px solid $border-color;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: left;
+}
+
+.logos {
+  height: 30px;
+  display: flex;
+  img {
+    height: 30px !important;
+    display: inline-block !important;
+    width: auto !important;
+    position: unset !important;
+  }
+
+  span {
+    position: unset !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.separator {
+  height: auto;
+  border: 0.5px solid $black;
+  margin: 0px 5px;
+}
+
+.co-branded-message {
+  color: $color-gray-400;
+}
+
+:export {
+  headerHeight: $header-height;
+}

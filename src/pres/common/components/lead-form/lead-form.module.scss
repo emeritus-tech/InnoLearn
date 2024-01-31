@@ -1,0 +1,222 @@
+.leadFormCntr {
+  background-color: $white;
+  color: $color-gray-900;
+  font-size: rem(14px);
+  margin: 0 auto;
+  padding: rem(20px);
+  position: inherit;
+  text-align: left;
+
+  h3 {
+    color: $color-gray-900;
+    font-size: rem(18px);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+    line-height: rem(28px);
+    margin-bottom: rem(12px);
+  }
+
+  .leadFormSubtitle {
+    color: $color-gray-900;
+    font-size: rem(14px);
+    line-height: 160%;
+    line-height: rem(22.4px);
+    margin-bottom: 16px;
+  }
+
+  .formAgreeCntr {
+    align-items: flex-start;
+    display: flex;
+    font-size: rem(12px);
+    line-height: rem(17px);
+    margin: rem(13px) 0;
+
+    input {
+      height: 14px;
+      margin-top: 2px;
+      width: 14px;
+    }
+
+    p {
+      font-size: rem(12px) !important;
+      margin: 0;
+      width: calc(100% - 22px);
+    }
+  }
+
+  .formBtn {
+    button {
+      font-weight: $font-weight-bold;
+      width: 100%;
+    }
+  }
+
+  .leadFormFieldsCntr {
+    div {
+      &[class*="inputContainer"] {
+        margin-bottom: 0 !important;
+      }
+
+      &[class*="mb-3"] {
+        margin-bottom: rem(10px) !important;
+      }
+
+      &[class*="lp-select--height-control"] {
+        height: rem(42px);
+
+        & > div {
+          padding-bottom: 0;
+          padding-inline: 10px;
+          padding-top: 0;
+        }
+
+        div > div {
+          margin-left: 0;
+          margin-top: 7px;
+
+          &[class*="-placeholder"] {
+            color: $gray-darker-flt-color;
+          }
+        }
+      }
+    }
+
+    input {
+      font-size: rem(14px);
+      min-height: rem(42px);
+      padding: .8125rem .625rem 0;
+
+      &::placeholder {
+        color: transparent !important;
+      }
+    }
+
+    select {
+      border-radius: rem(4px);
+    }
+
+    .radioContainer {
+      font-weight: $font-weight-medium;
+      height: rem(55px) !important;
+      margin-bottom: rem(15px) !important;
+      margin-top: rem(10px);
+
+      span {
+        display: block;
+        float: left;
+        line-height: rem(20px);
+        margin-bottom: rem(10px);
+        width: 100%;
+      }
+
+      label {
+        align-items: baseline;
+        display: inline;
+        display: flex;
+        float: left;
+        height: rem(30px);
+        margin-right: rem(10px);
+        min-width: rem(80px);
+
+        .radioInput {
+          float: left;
+          margin-right: 14px !important;
+          max-height: 10px;
+          min-height: 10px;
+          padding: 0;
+          scale: 2;
+
+          @media (max-width: 991px) {
+            margin-right: 10px !important;
+          }
+        }
+
+        span {
+          float: left;
+          font-size: rem(14px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .leadFormCntr {
+    .leadFormFieldsCntr {
+      .radioContainer {
+        label {
+          span {
+            float: left;
+            margin-right: rem(-10px) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .leadFormCntr {
+    float: right;
+    font-size: rem(16px);
+    max-width: rem(369px);
+    padding: rem(24px);
+    width: 100%;
+
+    h3 {
+      font-size: rem(22px);
+    }
+
+    .formAgreeCntr {
+      p {
+        font-size: rem(12px) !important;
+
+        a {
+          margin-left: 2px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .leadFormFieldsCntr {
+      input {
+        font-size: rem(16px);
+      }
+
+      .radioContainer {
+        height: rem(45px) !important;
+        overflow: visible;
+        padding-bottom: rem(10px);
+        padding-top: rem(10px);
+
+        span {
+          display: inline;
+          float: left;
+          line-height: rem(25px);
+          margin-right: rem(7px);
+          width: auto;
+        }
+
+        label {
+          display: inline;
+          float: left;
+          height: rem(30px);
+          margin-right: rem(10px);
+
+          .radioInput {
+            float: left;
+            max-height: rem(20px);
+            min-height: rem(20px);
+            padding: 0;
+            scale: 2;
+          }
+
+          span {
+            float: left;
+            margin-right: rem(-10px) !important;
+          }
+        }
+      }
+    }
+  }
+}

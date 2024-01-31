@@ -1,0 +1,17 @@
+.wrapper {
+  gap: 4rem;
+  height: 3.75rem;
+  background: black;
+  color: white;
+  font-size: 14px;
+  text-transform: 'uppercase';
+  z-index: 1000;
+}
+
+.exitButton {
+  background: white;
+  color: black;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+}

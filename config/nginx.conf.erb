@@ -1,0 +1,164 @@
+daemon off;
+# Heroku dynos have at least 4 cores.
+worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
+
+events {
+	accept_mutex on;
+	worker_connections <%= ENV['NGINX_WORKER_CONNECTIONS'] || 1024 %>;
+}
+
+http {
+	gzip on;
+	gzip_comp_level 2;
+	gzip_min_length 512;
+	gzip_proxied any; # Heroku router sends Via header
+
+	resolver 1.1.1.1;
+
+	server_tokens off;
+
+	log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
+	access_log <%= ENV['NGINX_ACCESS_LOG_PATH'] || 'logs/nginx/access.log' %> l2met;
+	error_log <%= ENV['NGINX_ERROR_LOG_PATH'] || 'logs/nginx/error.log' %>;
+
+	default_type application/octet-stream;
+	sendfile on;
+
+	# Must read the body in 5 seconds.
+	client_body_timeout 5;
+
+	upstream app_server {
+		server unix:/tmp/nginx.socket fail_timeout=0;
+	}
+
+	# Partner pages
+	server {
+		listen <%= ENV["PORT"] || 3000 %>;
+		server_name ~^(?<subdomain>.+)\.partner\..+$;
+		keepalive_timeout 5;
+
+		error_page 404 https://emeritus.org/404;
+
+		location ~/(?<locale>\w\w)?$ {
+			proxy_set_header Host $proxy_host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Scheme $scheme;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header X-Forwarded-Proto $scheme;
+			proxy_redirect off;
+
+			set $code default;
+
+			if ($locale = en) {
+				set $code en-US;
+			}
+			if ($locale = es) {
+				set $code es-ES;
+			}
+			if ($locale = pt) {
+				set $code pt-BR;
+			}
+			if ($locale = fr) {
+				set $code fr-FR;
+			}
+			if ($locale = in) {
+				set $code en-IN;
+			}
+
+			proxy_pass <%= ENV['CLOUDFRONT_INSTANCE'] || 'http://app_server' %>/$code/partners/$subdomain$is_args$args;
+		}
+
+		# For assets
+		location ~^/_next/(.*)$ {
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_pass <%= ENV['CLOUDFRONT_INSTANCE'] || 'http://app_server' %>/_next/$1$is_args$args;
+		}
+	}
+
+	# Enterprise/B2B pages
+	server {
+		listen <%= ENV["PORT"] || 3000 %>;
+		server_name ~^(?<subdomain>.+)\.enterprisepartner\..+$;
+		keepalive_timeout 5;
+
+		error_page 404 https://emeritus.org/404;
+
+		location ~/(?<locale>\w\w)?$ {
+			proxy_set_header Host $proxy_host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Scheme $scheme;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header X-Forwarded-Proto $scheme;
+			proxy_redirect off;
+
+			set $code default;
+
+			if ($locale = en) {
+				set $code en-US;
+			}
+			if ($locale = es) {
+				set $code es-ES;
+			}
+			if ($locale = pt) {
+				set $code pt-BR;
+			}
+			if ($locale = fr) {
+				set $code fr-FR;
+			}
+			if ($locale = in) {
+				set $code en-IN;
+			}
+
+			proxy_pass <%= ENV['CLOUDFRONT_INSTANCE'] || 'http://app_server' %>/$code/enterprises/$subdomain$is_args$args;
+		}
+
+		# For assets
+		location ~^/_next/(.*)$ {
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_pass <%= ENV['CLOUDFRONT_INSTANCE'] || 'http://app_server' %>/_next/$1$is_args$args;
+		}
+	}
+
+	# Default Heroku domain
+	server {
+		listen <%= ENV["PORT"] || 3000 %>;
+		server_name ~.+\.herokuapp\.com$;
+		keepalive_timeout 5;
+
+		location ~/$ {
+			return 301 https://emeritus.org;
+		}
+
+		location ~/(.*)$ {
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_pass http://app_server/$1$is_args$args;
+		}
+	}
+
+	server {
+		listen <%= ENV["PORT"] || 3000 %>;
+		server_name ~slp\.emeritus\.org$;
+		keepalive_timeout 5;
+
+		location ~/$ {
+			return 301 https://emeritus.org;
+		}
+
+		location ~/(.*)$ {
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_pass http://app_server/$1$is_args$args;
+		}
+	}
+
+	# Local environment
+	server {
+		listen <%= ENV["PORT"] || 3000 %>;
+		server_name localhost;
+		keepalive_timeout 5;
+
+		location ~/(.*)$ {
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_pass http://app_server/$1$is_args$args;
+		}
+	}
+}

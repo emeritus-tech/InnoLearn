@@ -1,0 +1,53 @@
+.flexiPaymentContainer {
+  font-size: rem(14px);
+  .programFeeLabel {
+    margin-bottom: 6px;
+  }
+  .discountText{
+    font-size: rem(12px);
+  }
+  .tableWrapper {
+    &:first-child {
+      margin-top: 15px;
+    }
+    margin-top: 25px;
+  }
+  .adminPrice {
+    font-size: rem(26px);
+    line-height: rem(32px);
+    font-weight: 700;
+  }
+  thead {
+    th {
+      font-weight: 700;
+      font-size: rem(14px);
+      border-bottom: 0 none;
+      background-color: $white-smoke;
+      border-top: 1px solid $black;
+    }
+  }
+
+  th, td {
+    text-align: center;
+  }
+}
+
+.twoColumn {
+  th, td {
+    width: 50%;
+  }
+}
+
+.threeColumn {
+  th, td {
+    width: 33.3%;
+  }
+}
+
+.tableColStrike {
+  tbody {
+    td:nth-of-type(2) {
+      text-decoration: line-through;
+    }
+  }
+}

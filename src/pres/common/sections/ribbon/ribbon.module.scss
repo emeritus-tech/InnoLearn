@@ -1,0 +1,31 @@
+$desktopHeight: 60px;
+$mobileHeight: 70px;
+
+.ribbon {
+  background-color: $color-green;
+  height: rem($desktopHeight);
+  z-index: 9999;
+  top: 0;
+
+  p {
+    margin: 0
+  }
+
+  button {
+    right: rem(30px);
+  }
+
+  @media screen and (max-width: $bp-md) {
+    height: rem($mobileHeight);
+
+    button {
+      right: rem(15px)
+    }
+
+  }
+}
+
+:export {
+  desktopHeight: $desktopHeight;
+  mobileHeight: $desktopHeight;
+}

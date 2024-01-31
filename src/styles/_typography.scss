@@ -1,0 +1,83 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* WEIGHTS */
+.text-weight-regular { font-weight: $font-weight-regular; }
+.text-weight-semibold { font-weight: $font-weight-semi-bold; }
+.text-weight-medium { font-weight: $font-weight-medium; }
+.text-weight-bold { font-weight: $font-weight-bold; }
+
+/* COLORS */
+.text-primary { color: $color-primary; }
+.text-secondary { color: $color-secondary; }
+.text-white { color: $white; }
+.text-black { color: $black; }
+.text-gray { color: $color-gray-800; }
+
+@mixin typo-h1 {
+  font-family: $main-font-family;
+  font-size: rem(48px);
+}
+
+@mixin typo-h2 {
+  font-family: $main-font-family;
+  font-size: rem(34px);
+}
+
+@mixin typo-h3 {
+  font-family: $main-font-family;
+  font-size: rem(24px);
+}
+
+@mixin typo-h4 {
+  font-family: $main-font-family;
+  font-size: rem(20px);
+}
+
+@mixin typo-h5 {
+  font-family: $main-font-family;
+  font-size: rem(18px);
+}
+
+@mixin typo-b1 {
+  font-family: $main-font-family;
+  font-size: rem(16px);
+}
+
+@mixin typo-b2 {
+  font-family: $main-font-family;
+  font-size: rem(14px);
+}
+
+@mixin typo-b3 {
+  font-family: $main-font-family;
+  font-size: rem(12px);
+}
+
+@mixin typo-b4 {
+  font-family: $main-font-family;
+  font-size: rem(10px);
+}
+
+.text-h1 { @include typo-h1; }
+.text-h2 { @include typo-h2; }
+.text-h3 { @include typo-h3; }
+.text-h4 { @include typo-h4; }
+.text-h5 { @include typo-h5; }
+.text-b1 { @include typo-b1; }
+.text-b2 { @include typo-b2; }
+.text-b3 { @include typo-b3; }
+.text-b4 { @include typo-b4; }
+
+/* Desktop */
+@media screen and (min-width: $bp-lg) {
+  .text-lg-h1 { @include typo-h1; }
+  .text-lg-h2 { @include typo-h2; }
+  .text-lg-h3 { @include typo-h3; }
+  .text-lg-h4 { @include typo-h4; }
+  .text-lg-h5 { @include typo-h5; }
+  .text-lg-b1 { @include typo-b1; }
+  .text-lg-b2 { @include typo-b2; }
+  .text-lg-b3 { @include typo-b3; }
+  .text-lg-b4 { @include typo-b4; }
+}

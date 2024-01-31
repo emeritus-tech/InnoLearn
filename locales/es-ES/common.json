@@ -1,0 +1,84 @@
+{
+  "referralsForm": {
+    "fillInTheDetails": "COMPLETA EL FORMULARIO",
+    "addFriendDetail": "Detalles del amigo",
+    "friendFirstName": "Nombre",
+    "friendLastName": "Apellido",
+    "friendEmail": "Email",
+    "friendPhone": "Teléfono",
+    "friendCountry": "País",
+    "addAdvocateDetails": "Detalles del promotor",
+    "advocateName": "Nombre",
+    "advocateEmail": "Email",
+    "advocatePhone": "Teléfono",
+    "advocateCountry": "País",
+    "chooseProgram": "Elige un programa",
+    "programInterestedIn": "Programa de interés",
+    "enterYourDetails": "Completa tus detalles",
+    "employeeEmailID": "Email del empleado",
+    "copyBottom": "Nota: Ingresa el email de Emeritus que usas para ingresar a salesforce",
+    "submit": "INGRESAR"
+  },
+  "greeting": "Hola Mundo",
+  "readMore": "Leer más",
+  "showMore": "Mostrar más",
+  "save": "BONIFICACIÓN DEL {{value}}",
+  "days": "{{value}} días",
+  "hours": "{{value}} horas",
+  "programFee": "PRECIO",
+  "payBy": "Paga antes del",
+  "at": "hasta las",
+  "tbd": "Por determinar",
+  "promotionAndEvents": "Especialista de promociones y eventos",
+  "learningWithFriendsBenefits" : "El beneficio de aprender junto con su amigo es que les permite mantener el ritmo de compromiso y pueden sostener debates significativos sobre lo que están aprendiendo.",
+  "locales": {
+    "en-US": "Inglés",
+    "es-ES": "Español",
+    "pt-BR": "Portugués",
+    "en-IN": "Inglés Indio",
+    "fr-FR": "Francés"
+  },
+  "flexiPay": {
+    "title": "Opciones de pago flexibles disponibles",
+    "programFee": "IMPORTE",
+    "discounts": "*El pago en cuotas supone cargos adicionales. La cantidad que se muestra en cuota a pagar incluye dicos cargos.",
+    "payFull": "Pagar el total",
+    "payInInstallments": "Pagar en {{installments}} cuotas",
+    "paymentDate": "Vencimiento",
+    "theadProgramFee": "Cuota",
+    "amountDue": "Cuota a pagar",
+    "immediately": "Inmediatamente"
+  },
+  "applyCoupon":"Aplicar código de cupón",
+  "couponCode":"Recuerde aplicar el código de cupón al finalizar la compra: {{coupon}}",
+  "applyNow": "Aplica ya",
+  "referralModal": {
+    "title": "Felicidades",
+    "subtitle": "Has sido invitado a {{program_name}}.",
+    "subtitleTwo": "Para comenzar, complete el formulario de información en la siguiente página.",
+    "explorePrograms": "Explorar programas",
+    "listTitle": "Cómo funciona",
+    "listItems": {
+      "listItemOne": "Completar formulario de información",
+      "listItemTwo": "Use el código de referencia de su colega: <b>{{coupon}}</b>",
+      "listItemThree": "Aprendan juntos y disfruten de <b>{{friends_reward_amount}} de descuento en las tarifas de su programa"
+    }
+  },
+  "enterpriseB2b":{
+    "title":"Gracias por su interés en el programa.",
+    "greetingTxt":"Recibirá un correo electrónico con un enlace al folleto del programa y los próximos pasos.",
+    "email":"Contáctenos vía correo electrónico",
+    "emailContactDetails": "¿Tienes preguntas sobre el curso o cómo inscribirte? Envíenos un correo electrónico a group-enrollments@emeritus.org. Intentamos responder a las consultas lo más rápido posible, pero espere entre 24 y 48 horas para responder.",
+    "policy":"¿Preguntas sobre el reembolso?",
+    "policyContactDetails":"Comuníquese con su gerente o socio comercial de RR.HH.",
+    "applyTitle":"¿Tiene preguntas?",
+    "apply": "Correo electrónico",
+    "applyContactDetails":"<a class='text-white' href='mailto:enterprise.clientsuccess@emeritus.org'>enterprise.clientsuccess@emeritus.org</a>. Intentamos responder a las consultas en 24 horas o menos. Sin embargo, durante los fines de semana y días festivos, nuestras respuestas pueden tardar hasta 72 horas."
+  },
+  "dynamicRibbonFallbackReferral":{
+    "inviteColleagues":"Invita a tus colegas y ahorra",
+    "inviteNow":"Invitar Ahora"
+  },
+  "startDateLabel": "Comienza El",
+  "lastDayToEnrollLabel": "Último día para inscribirse"
+}

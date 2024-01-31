@@ -1,0 +1,39 @@
+{
+  "locales": {
+    "en-US": "English",
+    "es-ES": "Spanish",
+    "pt-BR": "Portuguese",
+    "en-IN": "English India",
+    "fr-FR": "French"
+  },
+  "days": "{{value}} days",
+  "hours": "{{value}} hours",
+  "flexiPay": {
+    "title": "Flexible Payment Options Available",
+    "programFee": "PROGRAM FEE",
+    "discounts": "Any discounts will be applied at checkout.",
+    "payFull": "Pay in Full",
+    "payInInstallments": "Pay in {{installments}} installments",
+    "paymentDate": "Payment Date",
+    "theadProgramFee": "Program Fee",
+    "amountDue": "Amount Due",
+    "immediately": "Immediately"
+  },
+  "applyCoupon":"Apply coupon code",
+  "couponCode":"Remember to apply coupon code at checkout: {{coupon}}",
+  "fullSchedule":"View Full Schedule",
+  "applyNow": "Apply Now",
+  "enterpriseB2b":{
+    "title":"Thank you for your interest in the program.",
+    "greetingTxt":"You will receive an email with a link to the program brochure and next steps.",
+    "email":"Contact us via Email",
+    "emailContactDetails": "Have questions about the course or how to enroll? Email us at group-enrollments@emeritus.org. We attempt to respond to inquiries as quickly as possible, but please allow 24-48 hrs for response.",
+    "policy":"Reimbursement questions ?",
+    "policyContactDetails":"Please contact your manager or HR business partner.",
+    "applyTitle":"Have Questions?",
+    "apply": "Email",
+    "applyContactDetails":"<a class='text-white' href='mailto:enterprise.clientsuccess@emeritus.org'>enterprise.clientsuccess@emeritus.org</a>. We attempt to respond to queries in 24 hours or less. However, over weekends and holidays, our responses may take up to 72 hours."
+  },
+  "startDateLabel": "Starts On",
+  "lastDayToEnrollLabel": "Last Day To Enroll"
+}

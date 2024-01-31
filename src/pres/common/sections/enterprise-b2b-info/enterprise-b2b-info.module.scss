@@ -1,0 +1,17 @@
+.b2bInfoBanner {
+  margin-top: rem(-1px);
+
+  h4 {
+    margin-bottom: rem(10px) !important;
+
+    @media (max-width: 576px) {
+      margin: auto;
+      width: calc(100% - 24px);
+    }
+  }
+
+  .paymentOption {
+    line-height: 160%;
+    margin-bottom: rem(30px);
+  }
+}

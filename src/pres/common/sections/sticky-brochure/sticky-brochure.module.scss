@@ -1,0 +1,33 @@
+.buildingBlockContainer {
+  &::after {
+    display: none;
+  }
+
+  .btnGroupWrapper {
+    background-color: white;
+
+    .btnGroup {
+      padding: 9px 12px;
+    }
+  }
+
+  &.sticky {
+    .btnGroupWrapper {
+      bottom: 0;
+      box-shadow: 0 -5px 10px 0 rgb(0 0 0 / 10%);
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+}
+
+.stickyInfoBar {
+  background: inherit;
+  box-shadow: 0 7px 10px rgb(0 0 0 / 20%);
+  max-width: 100% !important;
+  position: sticky !important;
+  top: 0;
+  width: 100% !important;
+  z-index: 3;
+}

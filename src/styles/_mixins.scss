@@ -1,0 +1,41 @@
+/* ---------------------------
+  Center Element Absolutely
+---------------------------- */
+@mixin center-elem($orientation: default) {
+  position: absolute;
+
+  @if $orientation {
+    @if $orientation == "horizontal" {
+      transform: translateX(-50%);
+
+      left: 50%;
+    }
+
+    @if $orientation == "vertical" {
+      transform: translateY(-50%);
+
+      top: 50%;
+    }
+  }
+
+  @if $orientation == default {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+}
+ 
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+@function toRGB ($color) {
+    @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}
+

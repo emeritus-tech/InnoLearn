@@ -1,0 +1,15 @@
+.programListWrapper {
+  margin-top: 38px;
+}
+
+.programsListHeading {
+  @media (max-width: 991px) {
+    margin: auto 12px;
+  }
+}
+
+.programsIntro {
+  @media (max-width: 991px) {
+    margin: 10px 12px auto;
+  }
+}

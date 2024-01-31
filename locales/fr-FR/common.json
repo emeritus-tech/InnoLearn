@@ -1,0 +1,77 @@
+{
+  "referralsForm": {
+    "fillInTheDetails": "FILL IN THE DETAILS",
+    "addFriendDetail": "Add friend details",
+    "friendFirstName": "First name",
+    "friendLastName": "Last name",
+    "friendEmail": "Email",
+    "friendPhone": "Phone",
+    "friendCountry": "Country",
+    "addAdvocateDetails": "Add advocate details",
+    "advocateName": "Name",
+    "advocateEmail": "Email",
+    "advocatePhone": "Phone",
+    "advocateCountry": "Country",
+    "chooseProgram": "Choose program",
+    "programInterestedIn": "Program interested in",
+    "enterYourDetails": "Enter your details",
+    "employeeEmailID": "Employee email ID",
+    "copyBottom": "Note: Enter your Emeritus email id you use to login into salesforce",
+    "submit": "SUBMIT"
+  },
+  "readMore": "Lire plus",
+  "showMore": "Montrer plus",
+  "save": "Économiser {{value}}",
+  "days": "{{value}} días",
+  "hours": "{{value}} horas",
+  "programFee": "Frais de programme",
+  "payBy": "À payer avant le",
+  "at": "à",
+  "tbd": "À déterminer",
+  "promotionAndEvents": "Spécialiste en promotions et événements",
+  "learningWithFriendsBenefits" : "L'avantage d'apprendre avec votre ami est que vous pouvez vous encourager mutuellement et que vous pouvez avoir des discussions significatives sur ce que vous êtes entrain d'apprendre.",
+ "locales": {
+    "en-US": "Anglais",
+    "es-ES": "Espagnol",
+    "pt-BR": "Portugais",
+    "en-IN": "Anglais Indien",
+    "fr-FR": "Français"
+  },
+  "flexiPay": {
+    "title": "Opciones de pago flexibles disponibles",
+    "programFee": "FRAIS DU PROGRAMME",
+    "discounts": "Toutes les réductions seront appliquées à la caisse.",
+    "payFull": "Payer en entier",
+    "payInInstallments": "Payez en {{installments}} versements",
+    "paymentDate": "Date de paiement",
+    "theadProgramFee": "Frais du programme",
+    "amountDue": "Montant dû",
+    "immediately": "Immédiatement"
+  },
+  "applyCoupon":"Appliquer le code promo",
+  "couponCode":"N'oubliez pas d'appliquer le code de coupon à la caisse : {{coupon}}",
+  "applyNow": "Appliquer maintenant",
+  "referralModal": {
+    "title": "Toutes nos félicitations",
+    "subtitle": "Vous avez été invité à {{program_name}}.",
+    "subtitleTwo": "Pour commencer, veuillez remplir le formulaire d'information sur la page suivante.",
+    "explorePrograms": "Explorer les programmes",
+    "listTitle": "Comment ça fonctionne",
+    "listItems": {
+      "listItemOne": "Remplir le formulaire d'informations",
+      "listItemTwo": "Utilisez le code de parrainage de votre collègue : <b>{{coupon}}</b>",
+      "listItemThree": "Apprenez ensemble et profitez de <b>{{friends_reward_amount}}</b> de réduction sur vos frais de programme"
+    }
+  },
+  "enterpriseB2b":{
+    "title":"Merci de votre intérêt pour le programme.",
+    "greetingTxt":"Vous recevrez un e-mail avec un lien vers la brochure du programme et les prochaines étapes.",
+    "email":"Contactez-nous par e-mail",
+    "emailContactDetails": "Vous avez des questions sur le cours ou sur la façon de vous inscrire ? Envoyez-nous un e-mail à group-enrollments@emeritus.org. Nous essayons de répondre aux demandes le plus rapidement possible, mais veuillez prévoir un délai de réponse de 24 à 48 heures.",
+    "policy":"Des questions autour du remboursement ?",
+    "policyContactDetails":"Veuillez contacter votre responsable ou votre partenaire commercial RH.",
+    "applyTitle":"Avoir des questions?",
+    "apply": "E-mail",
+    "applyContactDetails":"<a class='text-white' href='mailto:enterprise.clientsuccess@emeritus.org'>enterprise.clientsuccess@emeritus.org</a>. Nous essayons de répondre aux requêtes dans les 24 heures ou moins. Cependant, pendant les week-ends et les jours fériés, nos réponses peuvent prendre jusqu'à 72 heures."
+  }
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [[ $HEROKU_APP_NAME != 'test' ]]
+then
+  next build
+fi

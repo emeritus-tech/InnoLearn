@@ -1,0 +1,356 @@
+.buildingBlockContainer {
+  background: $color-light-white;
+  padding: rem(0) rem(20px);
+
+  .buildingBlockParentThreeCol {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-start;
+
+    .buildingBlock {
+      display: flex;
+      flex-basis: 0;
+      flex-direction: column;
+      flex-grow: 1;
+      max-width: 25%;
+      padding: rem(30px) rem(20px);
+      position: relative;
+      width: 25%;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          background: $border-color;
+          content: "";
+          height: calc(100% - rem(60px));
+          position: absolute;
+          right: rem(0);
+          top: 50%;
+          transform: translateY(-50%);
+          width: rem(1px);
+        }
+      }
+    }
+  }
+
+  .buildingBlockParent {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-flow: wrap;
+
+    .buildingBlock {
+      display: flex;
+      flex-direction: column;
+      padding: rem(30px) rem(20px);
+      position: relative;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child) {
+        &:after {
+          content: "";
+          top: 50%;
+          right: rem(0px);
+          background: $border-color;
+          width: rem(1px);
+          height: calc(100% - rem(60px));
+          position: absolute;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .labelText {
+    color: $color-gray-900;
+    font-size: rem(14px);
+    font-variant: all-small-caps;
+    font-weight: $font-weight-regular;
+    letter-spacing: rem(.8px);
+    line-height: 120%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .duration {
+    color: $color-gray-900;
+    font-size: rem(18px);
+    font-weight: 700;
+    line-height: 140%;
+    margin: rem(3px) 0;
+    text-align: left;
+  }
+
+  .priceParent {
+    align-items: center;
+    align-self: flex-start;
+    color: $color-gray-900;
+    display: flex;
+    flex-direction: row;
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: 160%;
+    margin: rem(3px) 0;
+    text-align: left;
+
+    .originalPrice {
+      font-size: rem(14px);
+      line-height: rem(19.6px);
+      padding-right: rem(5px);
+      text-decoration: line-through;
+    }
+
+    .offeredPrice {
+      font-size: rem(18px);
+      font-weight: 700;
+      line-height: 140%;
+    }
+  }
+
+  .workLoad {
+    color: $color-gray-700;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: 140%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .feeLinkLabel {
+    color: $color-gray-700;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: 160%;
+    margin: 0;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  button {
+    &:not(.info-bar--btn) {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+/* Media Queries Starts */
+// For sticky download brochure button spacing
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .buildingBlockContainer {
+    padding: 0;
+
+    .buildingBlockParentThreeCol {
+      .buildingBlock {
+        margin: 0 rem(10px);
+        padding: rem(30px) rem(10px);
+
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .buildingBlockParent {
+      .buildingBlock {
+        margin: 0 rem(10px);
+        padding: rem(30px) rem(10px);
+
+        &:first-child {
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .buildingBlockContainer {
+    .buildingBlock0 {
+      .buildingBlock {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .buildingBlockContainer {
+    .buildingBlockParentThreeCol {
+      .buildingBlock {
+        margin: 0 rem(10px);
+        padding: rem(20px) rem(10px);
+
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .buildingBlockParent {
+      .buildingBlock {
+        margin: 0 rem(10px);
+        padding: rem(20px) rem(10px);
+
+        &:first-child {
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .buildingBlockContainer {
+    .duration {
+      font-size: rem(16px);
+      font-weight: 700;
+    }
+
+    .moreDetails {
+      font-size: rem(14px);
+    }
+
+    .priceParent {
+      font-size: rem(14px);
+      font-weight: 700;
+
+      .offeredPrice {
+        font-size: rem(16px);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .buildingBlockContainer {
+    .priceParent {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .buildingBlockContainer {
+    padding: 0;
+
+    .buildingBlockParentThreeCol {
+      flex-direction: unset;
+      flex-grow: unset;
+      justify-content: start;
+      padding: rem(4px) 0;
+
+      .buildingBlock {
+        border-bottom: 1px solid $border-color;
+        flex: none;
+        max-width: 100%;
+        padding: rem(20px) 0;
+        width: 100%;
+
+        &:last-child {
+          border-bottom: 0px solid $border-color;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        &:nth-child(odd) {
+          padding-right: rem(0);
+        }
+
+        &:nth-child(even) {
+          padding-left: rem(0);
+        }
+
+        .priceParent {
+          flex-direction: column;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          padding-top: rem(20px);
+        }
+      }
+    }
+
+    .buildingBlockParent {
+      flex-direction: unset;
+      flex-grow: unset;
+      padding: rem(4px) 0;
+
+      .buildingBlock {
+        flex: 50%;
+        padding: rem(16px) 0;
+
+        &:after {
+          display: none;
+        }
+
+        &:nth-child(odd) {
+          padding-right: rem(12px);
+        }
+
+        &:nth-child(even) {
+          padding-left: rem(12px);
+        }
+
+        .priceParent {
+          flex-direction: column;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries Ends */

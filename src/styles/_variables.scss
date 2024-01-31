@@ -1,0 +1,104 @@
+//----------------------------------*\
+// GLOBAL
+//----------------------------------*/
+$header-height: 3.875rem !default;
+
+//----------------------------------*\
+// BREAKPOINTS
+//----------------------------------*/
+
+/* BREAKPOINTS */
+$bp-xs: 0; // Mobile (not used)
+$bp-sm: 576px; // Landscape phones (deprecated)
+$bp-md: 768px; // Tablet
+$bp-lg: 992px; // Desktop
+$bp-xl: 1200px; // Desktop used by all "media-breakpoint-down(lg)"
+$bp-xxl: 1400px;
+
+/* GRID */
+$grid-breakpoints: (
+  xs: $bp-xs,
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl,
+  xxl:$bp-xxl
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl:1320px
+);
+
+//----------------------------------*\
+// COLORS
+//----------------------------------*/
+
+$black: #000 !default;
+$white: #fff !default;
+$red: #dc3545 !default;
+$color-gray-10: #fafafa !default;
+$color-gray-40: #f7f7f7 !default;
+$color-gray-50: #f8f8f8 !default;
+$color-gray-70: #f1f1f1 !default;
+$color-gray-80: #efefef !default;
+$color-gray-90: #ededed !default;
+$color-gray-100: #e8e8e8 !default;
+$color-gray-150: #e2e4e6 !default;
+$color-gray-200: #ccc !default;
+$color-gray-250: #ddd !default;
+$color-gray-300: #dddddf !default;
+$color-gray-400: #999 !default;
+$color-gray-450: #777 !default;
+$color-gray-500: #777879 !default;
+$color-gray-550: #666666 !default;
+$color-gray-600: #555 !default;
+$color-gray-700: #444 !default;
+$color-gray-800: #333 !default;
+$color-gray-900: #222 !default;
+$color-green: #008D51;
+$color-brown: #a31f34;
+$gray-darker-flt-color: #747474;
+
+$color-primary: #00be6d !default;
+$color-secondary: #df7978 !default;
+$secondary-light-color: #11435c !default;
+$secondary-lighter-color: #1f7ead !default;
+$light-blue: #f3f8fa;
+$gray-blue: #438ecb;
+$blue: #2684ff;
+$color-light-white: #F8F8FA;
+$color-dark-red: #A90533;
+$color-dark-blue: #004785;
+$color-cadet-blue: #b1bac2;
+$white-smoke: #f3f3f3;
+//----------------------------------*\
+// BORDER
+//----------------------------------*/
+
+$border-width: 1px;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+$border-color: #E5E5E5;
+
+//----------------------------------*\
+// FONTS
+//----------------------------------*/
+
+$main-font-family: Monserrat, arial, sans-serif !default;
+$roboto: Roboto, arial, sans-serif !default;
+
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;

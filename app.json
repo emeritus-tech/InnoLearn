@@ -1,0 +1,40 @@
+{
+  "addons": [
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku-community/nginx"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "APP_ENV": {
+      "description": "Used to differentiate between environments",
+      "value": "review_app"
+    },
+    "CONTENTFUL_CONTENT_DELIVERY_API_KEY": {
+      "required": true
+    },
+    "CONTENTFUL_ENVIRONMENT": {
+      "required": true
+    },
+    "CONTENTFUL_SPACE_ID": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
+  },
+  "environments": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "contentful-pages-app",
+  "stack": "heroku-20"
+}

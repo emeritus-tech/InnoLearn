@@ -1,0 +1,2 @@
+export const DEFAULT_BACKGROUND = '#FFFFFF'
+export const DEFAULT_FOREGROUND = '#000000'

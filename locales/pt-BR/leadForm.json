@@ -1,0 +1,15 @@
+{
+  "b2bFormTitle" : "Aprender é melhor com seus colegas",
+  "takingProgramTogetherText": "Nossos participantes nos dizem que fazer este programa junto com seus colegas ajuda a compartilhar uma linguagem comum e acelerar o impacto.",
+  "pricingOfferText": "Esperamos que você encontre o mesmo. Preços especiais estão disponíveis para grupos.",
+  "referralLeadFormTitle": "Continue sua inscrição",
+  "referralCta":"REFERÊNCIA DE RECLAMAÇÃO",
+  "enterpriseCta" :"Solicitar inscrição",
+  "enterpriseTitle":"Forneça suas informações abaixo",
+  "firstNameErrorTxt": "Deve ter no máximo 40 caracteres",
+  "lastNameErrorTxt": "Deve ter no máximo 80 caracteres",
+  "emailErrorTxt": "Formato de email inválido",
+  "phoneErrorTxt": "Por favor, forneça um número de telefone válido",
+  "emptyErrorTxt": "Por favor, forneça um valor válido",
+  "required": "Obrigatório"  
+}

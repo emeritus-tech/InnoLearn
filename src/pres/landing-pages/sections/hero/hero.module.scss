@@ -1,0 +1,114 @@
+.container {
+  height: rem(340px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 4rem;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.info {
+  background-color: $color-primary;
+  bottom: -20%;
+  padding: 3%;
+  width: rem(500px);
+  color: $white;
+  min-height: rem(250px);
+  border-image: linear-gradient(90deg, #40BDBF, #EEBB45) 90;
+  border-width: rem(4px);
+  border-style: solid none none;
+  z-index: 1;
+}
+
+.title {
+  color: $white;
+  font-weight: $font-weight-bold;
+  line-height: rem(46px);
+}
+
+.heroSubtitle {
+  line-height: 1.6;
+}
+.heroWrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: rem(30px) 0px;
+  overflow: visible !important;
+
+  h1 {
+    font-weight: $font-weight-bold;
+    font-size: rem(42px);
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    font-size: rem(22px);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+    line-height: 130%;
+  }
+ 
+}
+/* Media Queries Starts */
+
+@media screen and (max-width: $bp-sm) {
+  .info {
+    bottom: -100%;
+    margin: auto;
+    max-width: 120rem;
+    width: 100%;
+    margin-left: 0 !important;
+    min-height: auto;
+    padding: rem(30px) rem(20px);
+  }
+  .container {
+    margin-bottom: 3rem;
+    height: unset;
+    img {
+      position: unset !important;
+    }
+    span {
+      position: unset !important;
+      height: rem(430px) !important;
+    }
+  }
+}
+
+@media screen and (min-width: $bp-xl){
+  .info {
+    min-width: rem(600px);
+    position: relative;
+  }
+  .container {
+    position: relative;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  .heroWrapper {
+    padding: rem(30px) rem(28px);
+  }
+}
+@media (max-width: 991px){
+  .heroWrapper {
+    h1 {
+      font-size:rem(30px);
+      line-height:rem(37.5px);
+      letter-spacing:0;
+    }
+    h4{
+      font-size:rem(18px);
+      line-height:rem(23.4px);
+      letter-spacing:0;
+    }
+    h1, h4 {
+      text-align:center;
+    }
+  }
+}
+/* Media Queries Ends */

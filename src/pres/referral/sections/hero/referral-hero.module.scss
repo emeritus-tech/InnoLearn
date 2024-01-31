@@ -1,0 +1,221 @@
+.container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+
+  span {
+    text-align: left;
+  }
+  .input {
+    background: $white;
+    border: 0 solid #e5e5e5;
+    border-radius: 4px;
+    min-height: 40px;
+    padding: 0.8125rem 0.625rem 0;
+    &::placeholder {
+      color: transparent !important;
+    }
+  }
+}
+
+.referralWrapper {
+  form {
+    .formContainer {
+      span[class*="labelRequired"] {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.heroImage {
+  background-position: top;
+  background-size: cover;
+}
+
+.info {
+  bottom: -20%;
+  color: white;
+  height: 100%;
+  left: 0;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  color: $white;
+  font-size: 56px;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: 0;
+  line-height: 110%;
+}
+
+.smallTitle {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.smallInfo {
+  padding: 60px 20px;
+}
+
+.heroSubtitle {
+  font-size: 22px;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: 0;
+  line-height: 130%;
+  margin-bottom: 40px !important;
+  margin-top: 20px !important;
+}
+
+.smallSubtitle {
+  font-size: 16px !important;
+  font-weight: 400;
+  margin-bottom: 30px !important;
+}
+
+.inputContainer {
+  width: 400px;
+}
+
+.buttonContainer {
+  height: 40px;
+}
+
+
+
+.emailInput {
+  min-height: 40px;
+}
+
+.shareFormContainer {
+  display: flex;
+}
+
+.button {
+  height: 40px;
+  padding: 0 1rem;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.shareButtonMobile {
+  height: 40px;
+  padding: 0 1rem;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.linkContainer {
+  border: 1px solid #e5e5e5;
+  height: 40px;
+  overflow: hidden;
+  padding-left: 14px;
+  padding-top: 9px;
+  width: 100%;
+}
+
+.mainButton {
+  height: 40px;
+  width: auto;
+}
+
+.shareLink {
+  text-wrap: nowrap;
+}
+
+@media (max-width: 991px) {
+  .info {
+    bottom: -20%;
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 125%;
+  }
+
+  .heroSubtitle {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 130%;
+  }
+
+  .smallTitle {
+    font-size: 26px;
+  }
+
+  .smallSubtitle {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .referralWrapper {
+    max-width: 100% !important;
+  }
+
+  .formContainer {
+    flex-direction: row !important;
+  }
+
+  .input {
+    margin-right: 8px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .formContainer {
+    flex-direction: column !important;
+  }
+
+  .mainButton {
+    width: 100%;
+  }
+
+  .inputContainer {
+    width: 100%;
+  }
+
+  .input {
+    margin-right: 0;
+  }
+
+  .shareFormContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .linkContainer {
+    margin-bottom: 10px;
+  }
+
+  .button {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .shareButtonMobile {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 0 !important;
+    width: 50%;
+  }
+}

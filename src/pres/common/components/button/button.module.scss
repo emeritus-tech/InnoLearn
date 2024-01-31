@@ -1,0 +1,23 @@
+.primary {
+  background-color: $white;
+  color: $color-gray-800;
+
+  &:not(:disabled):hover {
+    color: $white;
+    border-color: transparent !important;
+    background: $color-green;
+  }
+  &:disabled {
+    background-color: $color-gray-200;
+    color: $color-gray-500;
+    cursor: not-allowed;
+  }
+}
+
+.link {
+  border: none;
+  background: none;
+  &:hover {
+    background: transparent;
+  }
+}

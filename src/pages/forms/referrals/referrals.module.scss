@@ -1,0 +1,116 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 40px;
+  background-color: $color-green;
+}
+
+.header {
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.formContainer{
+  margin-top: 40px;
+  padding: 10px;
+  background-color: $color-gray-50;
+  border: 1px solid $color-gray-300;
+  color: $color-gray-500;
+}
+
+.formTitle{
+  width: 100%;
+  background-color: $gray-blue;
+  padding: 10px;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+}
+
+.formSection{
+  border-bottom: 1px solid $gray-blue;
+  margin: 0px 20px 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formSectionTitle{
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.formInput{
+  width: 45%;
+  margin-bottom: 25px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.formSelect{
+  width: 45%;
+  font-size: 14px;
+  min-height: 30px;
+  margin-bottom: 25px;
+}
+
+.formFooter{
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 20px 10px;
+}
+
+.formSubmit{
+  font-size: 18px;
+  font-weight: bold;
+  color: $white;
+  background-color: $gray-blue;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:disabled {
+    background-color: $color-gray-200;
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 2px solid $white;
+  border-color: $white transparent $white transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorMessage {
+  color: $red;
+  font-size: 12px;
+}
+
+.inputWithError {
+  width: 100%;
+  height: 30px;
+}

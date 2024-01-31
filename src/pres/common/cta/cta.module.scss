@@ -1,0 +1,10 @@
+.emeritus-font-color {
+  color: $white !important;
+  background-color: $color-green !important;
+  border-color: $color-green !important;
+  
+  &:not(:disabled):hover {
+    color: $color-green !important;
+    background: $white !important;
+  }
+}
